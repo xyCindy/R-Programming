@@ -1,0 +1,50 @@
+# Week 3 Quiz
+## Question 1
+```{r}
+library(datasets)
+data(iris)
+?iris
+str(iris)
+mean(iris$Sepal.Length[iris$Species == "virginica"])
+```
+
+## Question 2
+```{r}
+apply(iris[, 1:4], 2, mean)
+```
+
+## Question 3
+```{r}
+library(datasets)
+data(mtcars)
+?mtcars
+str(mtcars)
+tapply(mtcars$mpg, mtcars$cyl, mean)
+```
+
+## Question 4
+First we split gross horse power based on numbers of cylinders:
+```{r}
+s <- split(mtcars$hp,mtcars$cyl)
+s
+```
+The average horsepower of 4-cylinder cars:
+```{r}
+avg1 <- mean(s$'4')
+```
+The average horsepower of 8-cylinder cars:
+```{r}
+avg2 <- mean(s$'8')
+```
+The absolute difference between the average horsepower of 4-cylinder cars 
+and the average horsepower of 8-cylinder cars is:
+```{r}
+abs(avg1-avg2)
+```
+
+## Question 5
+```{r}
+debug(ls)
+```
+Execution of 'ls' will suspend at the beginning of the function and 
+you will be in the browser.
