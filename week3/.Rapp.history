@@ -1,0 +1,133 @@
+getwd()
+x<-1:20
+x
+print(x)
+demo(graphics)
+demo(Hershey)
+options()
+help.start()
+source("/Users/cindy/Documents/GC_Data/week2/week2_quiz.R")
+install.packages("httr")#
+library(httr)
+oauth_endpoints("github")
+myapp <- oauth_app("getting_and_cleaning_data",#
+                   key = "f70aadb656203399496f",#
+                   secret = "5dc4d1b674e25f56e6ace7eab6e0ba5a82469d61")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)#
+req <- GET("https://api.github.com/rate_limit", gtoken)#
+stop_for_status(req)#
+content(req)
+BROWSE("https://api.github.com/users/jtleek/repos",#
+       authenticate("Access Token","x-oauth-basic","basic"))
+gtoken <- config(token = github_token)#
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken))#
+stop_for_status(req)#
+output <- content(req)#
+list(output[[4]]$name, output[[4]]$crated_at)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+stop_for_status(req)#
+output <- content(req)
+list(output[[4]]$name, output[[4]]$crated_at)
+head(output)
+output[[4]]$name
+output[[4]]$created_At
+output[[4]]$created_at
+list(output$name, output$crated_at)
+output[[6]]$created_at
+output[[8]]$created_at
+output[[1:10]]$created_at
+output[[1:8]]$created_at
+output[[1]]$created_at
+output$created_At
+output$created_at
+output[[2]]$created_at
+output[[7]]$created_at
+output[[8]]$created_at
+output[[9]]$created_at
+output[[10]]$created_at
+length(output)
+output[[30]]$created_at
+output[[31]]$created_at
+for i in (1:length(output)) {#
+    output[[i]]$crated_at#
+}
+i <-1#
+for i in (1:length(output)) {#
+    output[[i]]$crated_at#
+}
+for (i in 1:length(output)) {#
+    output[[i]]$crated_at#
+}
+for (i in (1:length(output))) {#
+    output[[i]]$crated_at#
+}
+for (i in (1:length(output))) {#
+    list(output[[i]]$crated_at)#
+}
+for (i in (1:length(output))) {#
+    print(output[[i]]$crated_at)#
+}
+print(output[[1]]$crated_at)
+output[[1]]$crated_at
+output <- content(req)
+output[[1]]$crated_at
+output[[6]]$crated_at
+gtoken <- config(token = github_token)#
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)#
+stop_for_status(req)#
+output <- content(req)
+output[[6]]$crated_at
+head(output)
+list(output[[4]]$name, output[[4]]$created_at)
+list(output[[8]]$name, output[[8]]$created_at)
+output[[1]]$created_at
+for (i in 1:30) {	#
+    print(output[[i]]$crated_at)#
+}
+for (i in 1:30) {	#
+    output[[i]]$crated_at#
+}
+output[[1]]$created_at
+for (i in 1:30) {	#
+    output[[i]]$created_at#
+}
+for (i in 1:30) {	#
+    print(output[[i]]$created_at)#
+}
+for (i in 1:length(output)) {	#
+    print(output[[i]]$created_at)#
+}
+output[[30]]$created_at
+output[[30]]$repo
+for (i in 1:length(output)) {	#
+    list(output[[i]]$html_url,output[[i]]$created_at)
+}
+for (i in 1:length(output)) {	#
+    print(output[[i]]$html_url,output[[i]]$created_at)
+}
+for (i in 1:length(output)) {	#
+    print(output[[i]]$html_url
+}
+for (i in 1:length(output)) {	#
+    print(output[[i]]$html_url)
+}
+for (i in 1:length(output)) {	#
+    print(output[[i]]$name == "datasharing",output[[i]]$created_at)
+}
+for (i in 1:length(output)) {	#
+	if (output[[i]] == "datasharing")#
+      print(output[[i]]$created_at)#
+}
+for (i in 1:length(output)) {	#
+	if (output[[i]]$name == "datasharing")#
+      print(output[[i]]$created_at)#
+}
+setwd("~/Documents/R_Programming/week3")
+package(‘knitr’)
+package(knitr)
+install.packages('knitr')
+package(knitr)
+library(knitr)
+knit2html()
+knit2html("week3_quiz.Rmd")
